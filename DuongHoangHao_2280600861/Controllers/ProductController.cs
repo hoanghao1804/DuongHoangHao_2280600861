@@ -1,5 +1,6 @@
 ﻿using DuongHoangHao_2280600861.Models;
 using DuongHoangHao_2280600861.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
