@@ -1,0 +1,11 @@
+﻿@model DuongHoangHao_2280600861.Models.Order
+
+<h2>Xóa Đơn Hàng</h2>
+
+<h3>Are you sure you want to delete this item?</h3>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("Index", "Order", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+</form>

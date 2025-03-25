@@ -1,0 +1,16 @@
+﻿@model DuongHoangHao_2280600861.Models.Product
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4 text-center">Xóa Sản phẩm</h2>
+
+<form id="deleteForm" asp-area="Admin" asp-controller="Product" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <p>Bạn chắc chắn muốn xóa sản phẩm <strong>@Model.Name</strong>?</p>
+
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="/Admin/Product/Index" class="btn btn-secondary">Hủy</a>
+</form>

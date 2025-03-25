@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DuongHoangHao_2280600861</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DuongHoangHao_2280600861.styles.css" asp-append-version="true" />
 </head>
@@ -27,20 +26,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Add">Add Product</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Danh sách Product</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Add">Add Product</a>
                         </li>
                     </ul>
-                    <div class="d-flex align-items-center">
-                        <partial name="_LoginPartial" />
-                        <a asp-controller="ShoppingCart" asp-action="Index" class="btn btn-outline-dark cart-btn d-flex align-items-center">
-                            <i class="bi bi-cart-fill me-2"></i>
-                            <span>Cart</span>
-                            <span class="cart-badge" style="color: red;">( @ViewData["CartItemCount"] )</span>
-                        </a>
-                    </div>
+                    <partial name ="_LoginPartial"/>
                 </div>
             </div>
         </nav>

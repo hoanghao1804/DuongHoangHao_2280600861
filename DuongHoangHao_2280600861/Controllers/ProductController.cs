@@ -1,6 +1,5 @@
 ﻿using DuongHoangHao_2280600861.Models;
 using DuongHoangHao_2280600861.Repositories;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -8,6 +7,7 @@ namespace DuongHoangHao_2280600861.Controllers
 {
     public class ProductController : Controller
     {
+
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
 
@@ -64,7 +64,7 @@ namespace DuongHoangHao_2280600861.Controllers
             var savePath = Path.Combine("wwwroot/images", image.FileName);
             using (var fileStream = new FileStream(savePath, FileMode.Create))
             {
-                await image.CopyToAsync(fileStream);
+              await image.CopyToAsync(fileStream);
             }
             return "/images/" + image.FileName;
         }
@@ -92,8 +92,7 @@ namespace DuongHoangHao_2280600861.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id, Product product, IFormFile imageUrl)
         {
-            ModelState.Remove("ImageUrl"); 
-
+            ModelState.Remove("ImageUrl");
             if (id != product.Id)
             {
                 return NotFound();
